@@ -6,4 +6,10 @@ If you have any questions I'll try my best to quickly answer them by email at [g
 
 ### Frequently Asked Questions
 
-None yet ;)
+#### Settings opens every time I restart my Mac
+
+Fixed in version 1.1.2. Update Little Faker from the Mac App Store.
+
+#### macOS showed "Login Item Added" when I turned on Open at login
+
+That's normal. macOS shows it once for any app that adds a login item. You can manage login items in System Settings → General → Login Items & Extensions.
