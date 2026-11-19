@@ -12,7 +12,7 @@ mise install
 mise run dev
 ```
 
-`mise run dev` serves the site on `localhost:4001` with live reload and opens a browser.
+`mise run dev` serves the site at `https://gc.dev.gshaw.ca` (hugo on :4030) with live reload and opens a browser.
 
 Deploy with `mise run deploy`. It refuses unless you're on a clean `main` with nothing newer on GitHub, then checks, pushes, waits for Workers Builds and runs `mise run verify`. `mise run deploy-status` says whether `main` is live. The rule is in [Workshop's deploy note](https://github.com/gshaw/Workshop/blob/main/Tooling/deploy.md).
 
