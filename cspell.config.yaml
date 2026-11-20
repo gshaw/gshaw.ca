@@ -15,6 +15,7 @@ ignorePaths:
   - "*.html"
   - "./content/articles/second.md"
 words:
+  - devhost
   - aedsim
   - birdsnearme
   - Canvus
