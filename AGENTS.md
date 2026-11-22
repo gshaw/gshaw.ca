@@ -51,12 +51,14 @@ production; any other branch runs `wrangler preview`, which gives it a Preview U
 `wrangler.jsonc` serves `public/` with no script. The two build triggers each set
 `HUGO_VERSION`, so a Hugo bump means changing `.mise.toml` and both triggers together.
 
-**Deploy with `mise run deploy`**, never a bare `git push` to `main`.
-`scripts/deploy-guard.sh` refuses unless the branch is `main`, the tree is clean and
-`origin/main` isn't ahead. Then it runs `check`, pushes, waits for the "Workers Builds: gshaw-ca"
-check run on the commit (`scripts/build-status.sh --wait`) and runs `verify`. A merged PR
-also deploys, since Workers Builds deploys every push to `main`. The rule and the list of sites are
-in [Workshop's deploy note](https://github.com/gshaw/Workshop/blob/main/Tooling/deploy.md).
+**Every change lands through a PR, squash-merged** (2026-11-21). Never push to `main`.
+Branch, open the PR, and Workers Builds comments its Preview URL. `gh pr merge --squash`
+is the deploy, since Workers Builds deploys every push to `main`. Then pull `main` and
+run `mise run deploy`: `scripts/deploy-guard.sh` refuses unless the branch is a clean
+`main` that matches `origin/main`, then it runs `check`, waits for the "Workers Builds:
+gshaw-ca" check run on the commit (`scripts/build-status.sh --wait`) and runs `verify`.
+It never pushes. The wider rule and the list of sites are in
+[Workshop's deploy note](https://github.com/gshaw/Workshop/blob/main/Tooling/deploy.md).
 
 GitHub Actions runs `mise run -c check` on pushes and PRs; it doesn't block Cloudflare.
 
