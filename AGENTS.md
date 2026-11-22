@@ -83,8 +83,10 @@ needs it.
   in `aedsim/`, `birdsnearme/`, `qr/` and `onnav/` used elsewhere. `static/_redirects` sends
   `/landnav/` and `/idefibrillate/` to the apps' own sites with a 301.
 - `layouts/`: `baseof.html` is the page shell; `_partials/head.html` builds the
-  description, canonical and Open Graph tags from `description`/`summary`, `ogimage` or a
-  recipe's non-placeholder picture, falling back to `hugo.toml`. `home.atom.xml` is the
+  description, canonical and Open Graph tags from `description`/`summary`. `og:image` is
+  the page's `ogimage` or a recipe's picture, placeholder or not; a page with neither gets
+  none, so iMessage shows its compact card. A page's `icon` replaces the
+  `apple-touch-icon` that compact card shows. `home.atom.xml` is the
   Atom feed at `/feed.xml`; `404.html` the not-found page.
 - `public/` is build output and `resources/` Hugo's image cache; both are gitignored.
 
@@ -147,7 +149,8 @@ Field notes:
   the tags. Nothing parses them.
 - `picture.filename` is an image in `static/recipes/`; `picture.title` is its alt text and
   caption. The layouts resize it to WebP. `placeholder: true` means there's no real photo
-  of the dish yet: the recipe page, its index card and its `og:image` all skip the picture.
+  of the dish yet: the recipe page and its index card skip the picture, but `og:image`
+  still uses it, so a shared recipe always shows a picture.
 - `### Variations` and the trailing `Source:` line are conventions across the existing
   recipes, not requirements.
 

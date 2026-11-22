@@ -1,4 +1,5 @@
 ---
+icon: /books/6105434.jpg
 title: Passionate Marriage
 description: Notes on David Schnarch's Passionate Marriage, the book that changed how I think about love, intimacy and growing up.
 ---
