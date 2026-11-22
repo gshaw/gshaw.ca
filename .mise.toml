@@ -43,15 +43,13 @@ test "$(curl -s -o /dev/null -w '%{http_code}' https://gshaw.ca/no-such-page/)" 
 echo "404 page works"
 """
 
-# The one way to production. See Workshop's Tooling/deploy.md. Workers Builds
-# builds and deploys main on push, so the push is the deploy and main may be ahead of origin.
-# The guard runs again after check in case check changed a file.
+# Changes land through a squash-merged PR, and Workers Builds deploys main on its own.
+# This confirms it: main must match origin/main, then check, wait for the build, verify.
+# See Workshop's Tooling/deploy.md.
 [tasks.deploy]
 run = [
-  "scripts/deploy-guard.sh --allow-ahead",
+  "scripts/deploy-guard.sh",
   "mise run check",
-  "scripts/deploy-guard.sh --allow-ahead",
-  "git push origin main",
   "scripts/build-status.sh --wait",
   "mise run verify",
   'echo "✅ $(git rev-parse --short HEAD) is live on gshaw.ca and verified."',
