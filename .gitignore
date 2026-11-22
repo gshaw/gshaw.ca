@@ -9,3 +9,6 @@ resources
 
 # macOS
 .DS_Store
+
+# Wrangler's local cache
+.wrangler

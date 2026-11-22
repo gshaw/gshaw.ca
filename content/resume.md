@@ -1,5 +1,6 @@
 ---
 title: Resume for Gerry Shaw
+description: Resume of Gerry Shaw, an independent software developer in Vancouver, Canada.
 hide_header: true
 hide_footer: true
 ---
