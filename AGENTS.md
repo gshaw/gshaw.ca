@@ -75,10 +75,9 @@ needs it.
   `static/books/` and the outbound link), newest `date` first. A book's `notes:` is the
   path of a notes page about it (`/books/passionate-marriage`), linked as "Read my notes →" on its card; the
   build fails if no page is there. Notes pages are files in `content/books/`.
-  `data/goodreads.yml` is a separate generated export of the full reading history.
 - `content/recipes/` — one file per recipe. `/recipes/` lists every file there; there is
   no index to update. Photos are in `static/recipes/`. See "Adding a recipe" below.
-- `content/resume.md`, `content/articles/` (posts at `/articles/<file name>/`).
+- `content/resume.md` → `/resume/`.
 - `static/` is published as it is: CSS, icons, book covers, recipe photos, and the images
   in `aedsim/`, `birdsnearme/`, `littlefaker/`, `qr/` and `onnav/` used elsewhere.
   `static/_redirects` sends `/landnav/`, `/idefibrillate/` and `/littlefaker/` to the apps'
@@ -87,8 +86,7 @@ needs it.
   description, canonical and Open Graph tags from `description`/`summary`. `og:image` is
   the page's `ogimage` or a recipe's picture, placeholder or not; a page with neither gets
   none, so iMessage shows its compact card. A page's `icon` replaces the
-  `apple-touch-icon` that compact card shows. `home.atom.xml` is the
-  Atom feed at `/feed.xml`; `404.html` the not-found page.
+  `apple-touch-icon` that compact card shows. `404.html` is the not-found page.
 - `public/` is build output and `resources/` Hugo's image cache; both are gitignored.
 
 Hugo doesn't run template code inside Markdown files: a loop over data goes in a
@@ -170,7 +168,6 @@ Each of these looks like an oversight and isn't. Leave them alone unless asked d
   allow-all file would add nothing. The site is intentionally open to search and AI crawlers.
 - **No `sitemap.xml`.** At roughly 30 well-linked pages, a sitemap adds no discoverability
   and would be one more thing to keep in sync.
-- **`/articles/` is not linked from the homepage, and its two posts are placeholders.**
-  The section is a work in progress and is deliberately left unlinked until there's real
-  writing to show. Don't link it from the homepage, delete the placeholder posts, or
-  otherwise tidy the section.
+- **No blog and no feed** (2026-11-22). The writing here is small pages like the book
+  notes, not dated posts, so `/articles/` and `/feed.xml` were removed. A feed can come
+  back once there are new pages worth announcing.

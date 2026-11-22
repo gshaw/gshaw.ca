@@ -1,5 +1,6 @@
 ---
 title: Favorite Books
+description: Books that shaped Gerry Shaw, with his reviews and notes.
 ---
 
 # Favorite Books

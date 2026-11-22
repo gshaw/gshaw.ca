@@ -13,7 +13,6 @@ ignorePaths:
   - "pico.min.css"
   - "*.xml"
   - "*.html"
-  - "./content/articles/second.md"
 words:
   - devhost
   - aedsim
