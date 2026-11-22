@@ -70,11 +70,11 @@ needs it.
 
 - `content/_index.md` — homepage. `{{< cards apps >}}` lists `data/apps.yml`;
   `{{< cards links >}}` lists the `links:` in the page's own front matter.
-- `content/books.md` → `/books/`. `{{< books >}}` lists `data/books.yml`
+- `content/books/_index.md` → `/books/`. `{{< books >}}` lists `data/books.yml`
   (hand-curated favorites, each with a Goodreads `id` used for both the cover image in
   `static/books/` and the outbound link), newest `date` first. A book's `notes:` is the
-  path of a notes page about it (`/pm`), linked as "Read my notes →" on its card; the
-  build fails if no page is there.
+  path of a notes page about it (`/books/passionate-marriage`), linked as "Read my notes →" on its card; the
+  build fails if no page is there. Notes pages are files in `content/books/`.
   `data/goodreads.yml` is a separate generated export of the full reading history.
 - `content/recipes/` — one file per recipe. `/recipes/` lists every file there; there is
   no index to update. Photos are in `static/recipes/`. See "Adding a recipe" below.
@@ -82,7 +82,7 @@ needs it.
 - `static/` is published as it is: CSS, icons, book covers, recipe photos, and the images
   in `aedsim/`, `birdsnearme/`, `littlefaker/`, `qr/` and `onnav/` used elsewhere.
   `static/_redirects` sends `/landnav/`, `/idefibrillate/` and `/littlefaker/` to the apps'
-  own sites with a 301.
+  own sites with a 301, and the old `/pm/` to its notes page under `/books/`.
 - `layouts/`: `baseof.html` is the page shell; `_partials/head.html` builds the
   description, canonical and Open Graph tags from `description`/`summary`. `og:image` is
   the page's `ogimage` or a recipe's picture, placeholder or not; a page with neither gets
