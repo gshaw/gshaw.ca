@@ -77,11 +77,10 @@ needs it.
 - `content/recipes/` — one file per recipe. `/recipes/` lists every file there; there is
   no index to update. Photos are in `static/recipes/`. See "Adding a recipe" below.
 - `content/resume.md`, `content/articles/` (posts at `/articles/<file name>/`).
-- `content/littlefaker/` holds Little Faker's landing, privacy and support pages, with
-  their own layout (`layouts/littlefaker/all.html`).
 - `static/` is published as it is: CSS, icons, book covers, recipe photos, and the images
-  in `aedsim/`, `birdsnearme/`, `qr/` and `onnav/` used elsewhere. `static/_redirects` sends
-  `/landnav/` and `/idefibrillate/` to the apps' own sites with a 301.
+  in `aedsim/`, `birdsnearme/`, `littlefaker/`, `qr/` and `onnav/` used elsewhere.
+  `static/_redirects` sends `/landnav/`, `/idefibrillate/` and `/littlefaker/` to the apps'
+  own sites with a 301.
 - `layouts/`: `baseof.html` is the page shell; `_partials/head.html` builds the
   description, canonical and Open Graph tags from `description`/`summary`. `og:image` is
   the page's `ogimage` or a recipe's picture, placeholder or not; a page with neither gets
