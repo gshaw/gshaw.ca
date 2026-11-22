@@ -17,6 +17,11 @@
         <p>by {{ .author }}</p>
       </hgroup>
       <p>{{ .review | strings.TrimSpace | replaceRE "\n" "<br>" | safeHTML }}</p>
+      {{- with .notes }}
+      {{- $page := site.GetPage . }}
+      {{- if not $page }}{{ errorf "books.yml: notes %q is not a page" . }}{{ end }}
+      <p><a href="{{ $page.RelPermalink }}"><strong>Read my notes →</strong></a></p>
+      {{- end }}
     </div>
   </div>
   {{- end }}

@@ -72,7 +72,9 @@ needs it.
   `{{< cards links >}}` lists the `links:` in the page's own front matter.
 - `content/books.md` → `/books/`. `{{< books >}}` lists `data/books.yml`
   (hand-curated favorites, each with a Goodreads `id` used for both the cover image in
-  `static/books/` and the outbound link), newest `date` first.
+  `static/books/` and the outbound link), newest `date` first. A book's `notes:` is the
+  path of a notes page about it (`/pm`), linked as "Read my notes →" on its card; the
+  build fails if no page is there.
   `data/goodreads.yml` is a separate generated export of the full reading history.
 - `content/recipes/` — one file per recipe. `/recipes/` lists every file there; there is
   no index to update. Photos are in `static/recipes/`. See "Adding a recipe" below.
