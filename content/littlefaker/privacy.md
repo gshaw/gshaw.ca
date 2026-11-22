@@ -1,4 +1,5 @@
 ---
+ogimage: /littlefaker/icon.png
 title: Little Faker Privacy Policy
 ---
 

@@ -6,7 +6,7 @@ tags:
 takes: 30 minutes
 makes: 4 servings
 picture:
-  title: Masoor Dal placeholder image.
+  title: Masoor dal with fried onions and cilantro.
   filename: masoor-dal.jpg
 ---
 

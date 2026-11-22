@@ -1,4 +1,5 @@
 ---
+ogimage: /gerry.jpg
 title: Gerry Shaw's Home Page
 hide_header: true
 links:
