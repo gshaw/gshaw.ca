@@ -102,7 +102,7 @@ Designed and created a worldwide field guide for birders integrating data from e
 #### Little Faker - Fast Fake Text Generation
 
 Designed and created a simple macOS app for generating fake text. Available on the macOS App Store.<br>
-[gshaw.ca/littlefaker](https://gshaw.ca/littlefaker)
+[littlefaker.gshaw.ca](https://littlefaker.gshaw.ca)
 
 #### Nant - A .NET Build Tool
 

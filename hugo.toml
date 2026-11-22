@@ -19,7 +19,7 @@ email = "gerry_shaw@yahoo.com"
 articles = "/articles/:contentbasename/"
 
 [markup.goldmark.renderer]
-unsafe = true # raw HTML in Markdown: the Little Faker badge, the home page's header picture
+unsafe = true # raw HTML in Markdown: the home page's header picture
 
 [mediaTypes."application/atom+xml"]
 suffixes = ["xml"]
