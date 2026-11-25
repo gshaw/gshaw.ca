@@ -22,18 +22,18 @@ real change to the project's shape; ask first.
 ## Commands
 
 ```sh
-mise run dev       # https://gc.dev.gshaw.ca, hugo on :4030 with live reload
+mise run dev       # https://gs.dev.gshaw.ca, hugo on :4030 with live reload
 mise run check     # build + spell + markdownlint + internal links
 mise run deploy    # guard, check, push, wait for the build, verify
 mise run verify    # curl the live site
 mise run deploy-status  # is main live?
 ```
 
-**The dev URL is `https://gc.dev.gshaw.ca`**, on the Mac and the phone over the tailnet.
+**The dev URL is `https://gs.dev.gshaw.ca`**, on the Mac and the phone over the tailnet.
 Caddy on lagoon forwards it to :4030, so give Gerry that URL to try a branch, never a
-`ts.net` address or a port. One server owns it: `devhost serve gc`, run from your
+`ts.net` address or a port. One server owns it: `devhost serve gs`, run from your
 checkout, stops whatever holds :4030 and runs the dev task there as a launchd job that
-outlives your session (a background command stops at 2 hours). `devhost stop gc` ends it.
+outlives your session (a background command stops at 2 hours). `devhost stop gs` ends it.
 How it works: Workshop's `Tooling/one-dev-url.md`.
 
 **Read the counts, not just the exit code.** lychee prints `N OK` and cspell prints
